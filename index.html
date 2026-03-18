@@ -100,8 +100,9 @@ img{max-width:100%;display:block}
 .trust-container{max-width:1200px;margin:0 auto}
 .trust-label{text-align:center;font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:0.12em;color:#888;margin-bottom:1.5rem}
 .trust-brands{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:1.5rem 2.5rem}
-.brand-badge{padding:0.5rem 1.25rem;background:#fff;border:1px solid #e0e0e0;border-radius:8px;font-size:0.8rem;font-weight:700;color:#444;letter-spacing:0.05em;transition:all 0.2s;white-space:nowrap}
-.brand-badge:hover{border-color:var(--orange);color:var(--orange);transform:translateY(-1px)}
+.brand-badge{padding:0.6rem 1.25rem;background:#fff;border:1px solid #e0e0e0;border-radius:8px;transition:all 0.2s;display:flex;align-items:center;justify-content:center}
+.brand-badge img{height:28px;width:auto;filter:grayscale(100%) opacity(0.55);transition:all 0.2s}
+.brand-badge:hover img{filter:grayscale(0%) opacity(1);transform:translateY(-1px)}
 
 /* ===== SECTION COMMONS ===== */
 .section{padding:5rem 2rem}
@@ -325,14 +326,14 @@ img{max-width:100%;display:block}
   <div class="trust-container">
     <p class="trust-label">Portfolio companies with proven partnerships across the world's leading automotive brands</p>
     <div class="trust-brands fade-up">
-      <div class="brand-badge">Ford</div>
-      <div class="brand-badge">Kia</div>
-      <div class="brand-badge">Subaru</div>
-      <div class="brand-badge">Volkswagen</div>
-      <div class="brand-badge">Nissan</div>
-      <div class="brand-badge">Chrysler / Mopar</div>
-      <div class="brand-badge">Cox Automotive</div>
-      <div class="brand-badge">J.D. Power</div>
+      <div class="brand-badge"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/ford.svg" alt="Ford"></div>
+      <div class="brand-badge"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/kia.svg" alt="Kia"></div>
+      <div class="brand-badge"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/subaru.svg" alt="Subaru"></div>
+      <div class="brand-badge"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/volkswagen.svg" alt="Volkswagen"></div>
+      <div class="brand-badge"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/nissan.svg" alt="Nissan"></div>
+      <div class="brand-badge" style="font-size:0.75rem;font-weight:800;color:#444;padding:0.8rem 1rem;letter-spacing:0.04em;">MOPAR</div>
+      <div class="brand-badge" style="font-size:0.65rem;font-weight:800;color:#444;padding:0.8rem 1rem;letter-spacing:0.04em;">COX AUTOMOTIVE</div>
+      <div class="brand-badge" style="font-size:0.65rem;font-weight:800;color:#444;padding:0.8rem 1rem;letter-spacing:0.04em;">J.D. POWER</div>
     </div>
   </div>
 </section>
