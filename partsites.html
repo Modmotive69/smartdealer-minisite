@@ -80,6 +80,15 @@ img{max-width:100%;display:block}
 .btn-outline:hover{border-color:#fff;background:rgba(255,255,255,0.1)}
 .hero-img-wrap img{border-radius:16px;box-shadow:0 30px 80px rgba(0,0,0,0.5);width:100%}
 @media(max-width:900px){.hero-container{grid-template-columns:1fr}.hero-img-wrap{display:none}}
+.trust-bar{background:var(--gray-light);padding:2.5rem 2rem;border-bottom:1px solid #e5e5e5}
+.trust-container{max-width:1200px;margin:0 auto}
+.trust-label{text-align:center;font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:0.12em;color:#888;margin-bottom:1.5rem}
+.trust-brands{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:1.5rem 2.5rem}
+.brand-badge{display:flex;align-items:center;justify-content:center;height:50px;width:130px;flex-shrink:0}
+.brand-badge img{max-height:100%;max-width:100%;width:auto;height:auto;object-fit:contain;filter:grayscale(100%) opacity(0.45);transition:filter 0.3s}
+.brand-badge img:hover{filter:grayscale(0%) opacity(1)}
+.brand-wordmark{font-size:0.85rem;font-weight:800;color:#aaa;letter-spacing:0.08em;white-space:nowrap;transition:color 0.3s;flex-shrink:0}
+.brand-wordmark:hover{color:#333}
 .section{padding:5rem 2rem}
 .section-container{max-width:1200px;margin:0 auto}
 .section-eyebrow{font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:0.14em;color:var(--orange);margin-bottom:0.6rem}
@@ -214,6 +223,22 @@ img{max-width:100%;display:block}
     </div>
     <div class="hero-img-wrap fade-up">
       <img src="https://smartdealer.com/wp-content/uploads/2025/05/Envy-billboard-copy-1.png" alt="PartSites ENVY PRO" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<section class="trust-bar">
+  <div class="trust-container">
+    <p class="trust-label">Portfolio companies with proven partnerships across the world's leading automotive brands</p>
+    <div class="trust-brands fade-up">
+      <div class="brand-badge"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/ford.svg" alt="Ford"></div>
+      <div class="brand-badge"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/kia.svg" alt="Kia"></div>
+      <div class="brand-badge"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/subaru.svg" alt="Subaru"></div>
+      <div class="brand-badge"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/volkswagen.svg" alt="Volkswagen"></div>
+      <div class="brand-badge"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/nissan.svg" alt="Nissan"></div>
+      <div class="brand-badge" style="font-size:0.75rem;font-weight:800;color:#444;padding:0.8rem 1rem;letter-spacing:0.04em;">MOPAR</div>
+      <div class="brand-badge" style="font-size:0.65rem;font-weight:800;color:#444;padding:0.8rem 1rem;letter-spacing:0.04em;">COX AUTOMOTIVE</div>
+      <div class="brand-badge" style="font-size:0.65rem;font-weight:800;color:#444;padding:0.8rem 1rem;letter-spacing:0.04em;">J.D. POWER</div>
     </div>
   </div>
 </section>
