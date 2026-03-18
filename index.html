@@ -100,9 +100,15 @@ img{max-width:100%;display:block}
 .trust-container{max-width:1200px;margin:0 auto}
 .trust-label{text-align:center;font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:0.12em;color:#888;margin-bottom:1.5rem}
 .trust-brands{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:1.5rem 2.5rem}
-.brand-badge{padding:0.6rem 1.25rem;background:#fff;border:1px solid #e0e0e0;border-radius:8px;transition:all 0.2s;display:flex;align-items:center;justify-content:center}
-.brand-badge img{height:28px;width:auto;filter:grayscale(100%) opacity(0.55);transition:all 0.2s}
-.brand-badge:hover img{filter:grayscale(0%) opacity(1);transform:translateY(-1px)}
+.trust-brands{overflow:hidden;position:relative}
+.brand-track{display:flex;align-items:center;gap:3.5rem;animation:scroll-brands 22s linear infinite;width:max-content}
+.brand-track:hover{animation-play-state:paused}
+@keyframes scroll-brands{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.brand-badge{background:none;border:none;padding:0;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.brand-badge img{height:42px;width:auto;filter:grayscale(100%) opacity(0.45);transition:filter 0.3s}
+.brand-badge img:hover{filter:grayscale(0%) opacity(1)}
+.brand-wordmark{font-size:0.85rem;font-weight:800;color:#aaa;letter-spacing:0.08em;white-space:nowrap;transition:color 0.3s;flex-shrink:0}
+.brand-wordmark:hover{color:#333}
 
 /* ===== SECTION COMMONS ===== */
 .section{padding:5rem 2rem}
