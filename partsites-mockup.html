@@ -111,7 +111,7 @@
                     <p class="text-gray-500 mb-6 text-sm">What you're currently paying for the exact same Motor EPC data.</p>
                     <ul class="space-y-4 text-gray-600 font-medium">
                         <li class="flex items-center text-red-500"><svg class="w-6 h-6 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg> <span class="text-gray-700 line-through">$400 - $500+ Monthly Subscriptions</span></li>
-                        <li class="flex items-center text-red-500"><svg class="w-6 h-6 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg> <span class="text-gray-700 line-through">Heavy Transaction Charges (1-3% of sales)</span></li>
+                        <li class="flex items-center text-red-500"><svg class="w-6 h-6 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg> <span class="text-gray-700 line-through">Heavy Transaction Charges (1% of sales)</span></li>
                         <li class="flex items-center text-red-500"><svg class="w-6 h-6 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg> <span class="text-gray-700 line-through">Expensive Setup & Onboarding Costs</span></li>
                         <li class="flex items-center text-red-500"><svg class="w-6 h-6 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg> <span class="text-gray-700 line-through">Locked into Long-Term Contracts</span></li>
                     </ul>
@@ -159,7 +159,7 @@
 
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                         <div class="bg-gray-50 rounded-xl p-6 border border-gray-200 text-center">
-                            <h4 class="text-gray-500 font-bold mb-2">Competitor Fees (Est. 2.5% + $400/mo)</h4>
+                            <h4 class="text-gray-500 font-bold mb-2">Competitor Fees (Est. 1% + $400/mo)</h4>
                             <div class="text-3xl font-extrabold text-gray-900" id="compFee">$19,800 <span class="text-sm font-medium text-gray-500">/ yr</span></div>
                             <p class="text-xs text-red-500 mt-2 font-bold">Margin Lost</p>
                         </div>
@@ -195,8 +195,8 @@
             const monthlySales = parseInt(this.value);
             salesDisplay.textContent = formatCurrency(monthlySales);
             
-            // Competitor logic: 2.5% transaction fee + $400 base
-            const compMonthlyFee = (monthlySales * 0.025) + 400;
+            // Competitor logic: 1% transaction fee + $400 base
+            const compMonthlyFee = (monthlySales * 0.01) + 400;
             const compAnnualFee = compMonthlyFee * 12;
             
             // PartSites logic: $99 flat
