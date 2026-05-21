@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PartSites (ENVY PRO) — The #1 OEM Parts eStore | SmartDealer</title>
+<meta name="description" content="PartSites ENVY PRO — the #1 ranked OEM parts & accessories eStore for franchised dealers. PAGETECH generates 75,000 SEO pages per brand. $500M+ in dealer sales. No transaction fees. No contracts.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚙️</text></svg>">
+<style>
+:root{--navy:#0a1628;--mid-navy:#1a2f4e;--orange:#ff6b2b;--orange-dark:#e85a1a;--white:#ffffff;--gray-light:#f5f5f5}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:var(--white);color:#1a1a2e;line-height:1.6;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+
+/* ===== NAVBAR ===== */
+.navbar{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(10,22,40,0.97);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,0.08);transition:border-color 0.3s}
+.nav-container{max-width:1200px;margin:0 auto;padding:0 2rem;display:flex;align-items:center;height:70px;gap:1rem}
+.nav-logo{display:flex;flex-direction:column;text-decoration:none;line-height:1.1;flex-shrink:0}
+.logo-main{font-size:1.25rem;font-weight:800;color:#fff;letter-spacing:0.06em}
+.logo-sub{font-size:0.6rem;font-weight:400;color:rgba(255,255,255,0.5);letter-spacing:0.12em;text-transform:uppercase}
+.nav-menu{display:flex;align-items:center;gap:0.25rem;margin-left:auto}
+.nav-item{position:relative}
+.nav-link{display:flex;align-items:center;gap:0.3rem;padding:0.5rem 0.85rem;color:rgba(255,255,255,0.8);font-size:0.875rem;font-weight:600;border-radius:6px;transition:all 0.2s;background:none;border:none;cursor:pointer;font-family:'Inter',sans-serif;white-space:nowrap}
+.nav-link:hover,.nav-link.active{color:var(--orange);background:rgba(255,107,43,0.1)}
+.chevron{font-size:0.65rem;transition:transform 0.3s;display:inline-block}
+.nav-cta{display:inline-flex;align-items:center;padding:0.55rem 1.2rem;background:var(--orange);color:#fff;font-size:0.85rem;font-weight:700;border-radius:6px;transition:all 0.2s;margin-left:0.75rem;white-space:nowrap;font-family:'Inter',sans-serif}
+.nav-cta:hover{background:var(--orange-dark);transform:translateY(-1px);box-shadow:0 4px 15px rgba(255,107,43,0.4)}
+
+/* ===== MEGA MENU ===== */
+.mega-menu{position:absolute;top:calc(100% + 10px);left:50%;transform:translateX(-60%) translateY(-6px);width:740px;background:var(--navy);border:1px solid rgba(255,255,255,0.1);border-radius:14px;box-shadow:0 25px 70px rgba(0,0,0,0.6),0 0 0 1px rgba(255,107,43,0.08);opacity:0;visibility:hidden;transition:all 0.22s ease;pointer-events:none}
+.has-mega:hover .mega-menu,.has-mega.open .mega-menu{opacity:1;visibility:visible;transform:translateX(-60%) translateY(0);pointer-events:all}
+.mega-inner{display:grid;grid-template-columns:1fr 1fr auto;gap:0;padding:1.75rem 1.75rem 1.25rem}
+.mega-col{padding:0 1.25rem}
+.mega-col:first-child{padding-left:0;border-right:1px solid rgba(255,255,255,0.06)}
+.mega-col:nth-child(2){border-right:1px solid rgba(255,255,255,0.06)}
+.mega-col:last-child{padding-right:0;min-width:180px}
+.mega-col-header{font-size:0.62rem;font-weight:700;text-transform:uppercase;letter-spacing:0.13em;color:var(--orange);margin-bottom:0.875rem;padding-bottom:0.5rem;border-bottom:1px solid rgba(255,107,43,0.18)}
+.mega-item{display:flex;align-items:flex-start;gap:0.7rem;padding:0.55rem 0.6rem;border-radius:8px;text-decoration:none;transition:all 0.18s;margin-bottom:0.1rem}
+.mega-item:hover{background:rgba(255,107,43,0.09)}
+.mega-icon{font-size:1.15rem;flex-shrink:0;margin-top:0.1rem;line-height:1;color:var(--orange)}
+.mega-item-name{font-size:0.82rem;font-weight:700;color:#fff;margin-bottom:0.12rem;line-height:1.2}
+.mega-item-desc{font-size:0.72rem;color:rgba(255,255,255,0.5);line-height:1.35}
+.mega-featured{display:flex;flex-direction:column;align-items:flex-start;gap:0.4rem;padding:1rem;border-radius:10px;background:linear-gradient(135deg,rgba(255,107,43,0.12),rgba(255,107,43,0.05));border:1px solid rgba(255,107,43,0.2);text-decoration:none;transition:all 0.2s}
+.mega-featured:hover{background:linear-gradient(135deg,rgba(255,107,43,0.2),rgba(255,107,43,0.1));border-color:rgba(255,107,43,0.4)}
+.mega-icon-lg{font-size:1.8rem;line-height:1}
+.mega-badge{display:inline-block;font-size:0.65rem;font-weight:700;background:rgba(255,107,43,0.15);color:var(--orange);padding:0.2rem 0.5rem;border-radius:20px;border:1px solid rgba(255,107,43,0.3);margin-top:0.2rem;text-transform:uppercase;letter-spacing:0.05em}
+.mega-footer{border-top:1px solid rgba(255,255,255,0.06);padding:0.875rem 1.75rem;display:flex;justify-content:flex-end}
+.mega-footer a{color:var(--orange);font-size:0.82rem;font-weight:700;transition:opacity 0.2s}
+.mega-footer a:hover{opacity:0.75}
+
+/* ===== HAMBURGER ===== */
+.hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:6px;margin-left:auto}
+.hamburger span{display:block;width:24px;height:2px;background:#fff;border-radius:2px;transition:all 0.3s ease}
+.hamburger.active span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
+.hamburger.active span:nth-child(2){opacity:0;transform:translateX(-8px)}
+.hamburger.active span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+
+@media(max-width:900px){
+  .hamburger{display:flex}
+  .nav-menu{position:fixed;top:70px;left:0;right:0;bottom:0;background:var(--navy);flex-direction:column;align-items:stretch;gap:0;padding:1rem 1rem 2rem;overflow-y:auto;transform:translateX(100%);transition:transform 0.3s ease;border-top:1px solid rgba(255,255,255,0.08)}
+  .nav-menu.open{transform:translateX(0)}
+  .nav-item{width:100%}
+  .nav-link{width:100%;justify-content:space-between;padding:0.875rem 1rem;border-radius:8px;font-size:0.95rem}
+  .mega-menu{position:static;transform:none !important;width:100%;box-shadow:none;border:none;border-radius:10px;opacity:1;visibility:visible;pointer-events:all;max-height:0;overflow:hidden;transition:max-height 0.4s ease;background:rgba(255,255,255,0.04);margin-top:0.25rem}
+  .has-mega.open .mega-menu{max-height:900px}
+  .mega-inner{grid-template-columns:1fr;padding:1rem}
+  .mega-col{padding:0 0 1rem 0;border:none !important}
+  .mega-col:last-child{padding-bottom:0}
+  .nav-cta{margin:0.75rem 0 0;text-align:center;padding:0.875rem;border-radius:8px;font-size:0.95rem}
+}
+
+/* ===== PAGE HERO ===== */
+.page-hero{padding:10rem 2rem 5rem;background:linear-gradient(135deg,var(--navy) 0%,var(--mid-navy) 100%);color:#fff;position:relative;overflow:hidden}
+.page-hero::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,0.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.025) 1px,transparent 1px);background-size:60px 60px;pointer-events:none}
+.page-hero::after{content:'';position:absolute;top:-200px;right:-200px;width:600px;height:600px;background:radial-gradient(circle,rgba(255,107,43,0.18) 0%,transparent 60%);pointer-events:none}
+.hero-container{max-width:1200px;margin:0 auto;position:relative;z-index:2;display:grid;grid-template-columns:1.15fr 0.85fr;gap:4rem;align-items:center}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:0.5rem;font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:0.15em;color:var(--orange);background:rgba(255,107,43,0.12);border:1px solid rgba(255,107,43,0.25);padding:0.4rem 1rem;border-radius:20px;margin-bottom:1.5rem}
+.page-hero h1{font-size:clamp(2rem,4.2vw,3.4rem);font-weight:800;color:#fff;line-height:1.12;margin-bottom:1.25rem}
+.page-hero h1 .accent{color:var(--orange)}
+.page-hero .lede{font-size:1.1rem;color:rgba(255,255,255,0.72);line-height:1.7;margin-bottom:2rem;max-width:560px}
+.hero-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-bottom:2.5rem;max-width:560px}
+.hero-stat{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:10px;padding:1rem 1.1rem;text-align:left}
+.hero-stat-val{font-size:1.55rem;font-weight:800;color:var(--orange);line-height:1.1;margin-bottom:0.2rem}
+.hero-stat-lbl{font-size:0.7rem;color:rgba(255,255,255,0.55);text-transform:uppercase;letter-spacing:0.08em;font-weight:600;line-height:1.3}
+.hero-btns{display:flex;gap:1rem;flex-wrap:wrap}
+.btn-primary{display:inline-flex;align-items:center;gap:0.5rem;padding:0.95rem 2rem;background:var(--orange);color:#fff;font-weight:700;font-size:0.95rem;border-radius:8px;transition:all 0.2s;border:2px solid transparent}
+.btn-primary:hover{background:var(--orange-dark);transform:translateY(-2px);box-shadow:0 8px 25px rgba(255,107,43,0.4)}
+.btn-outline{display:inline-flex;align-items:center;gap:0.5rem;padding:0.95rem 2rem;background:transparent;color:#fff;font-weight:700;font-size:0.95rem;border-radius:8px;transition:all 0.2s;border:2px solid rgba(255,255,255,0.4)}
+.btn-outline:hover{border-color:#fff;background:rgba(255,255,255,0.1)}
+
+/* hero visual */
+.hero-visual{position:relative;height:420px}
+.hero-card{position:absolute;background:rgba(255,255,255,0.06);backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,0.1);border-radius:14px;padding:1.25rem 1.4rem;box-shadow:0 20px 50px rgba(0,0,0,0.4)}
+.hero-card-1{top:0;left:0;width:260px}
+.hero-card-2{top:130px;right:0;width:220px}
+.hero-card-3{bottom:0;left:40px;width:280px}
+.hc-label{font-size:0.66rem;color:var(--orange);text-transform:uppercase;letter-spacing:0.12em;font-weight:700;margin-bottom:0.4rem}
+.hc-title{font-size:0.95rem;font-weight:800;color:#fff;margin-bottom:0.25rem}
+.hc-sub{font-size:0.78rem;color:rgba(255,255,255,0.6);line-height:1.5}
+.hc-big{font-size:2rem;font-weight:800;color:#fff;line-height:1;margin:0.4rem 0 0.2rem}
+.hc-bar{height:6px;background:rgba(255,255,255,0.1);border-radius:3px;overflow:hidden;margin-top:0.6rem}
+.hc-bar div{height:100%;background:var(--orange);border-radius:3px}
+
+@media(max-width:1000px){.hero-container{grid-template-columns:1fr;gap:3rem}.hero-visual{height:380px;max-width:480px;margin:0 auto}.hero-stats{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:600px){.hero-stats{grid-template-columns:1fr 1fr}.hero-stat:last-child{grid-column:span 2}.hero-visual{display:none}}
+
+/* ===== SECTION COMMONS ===== */
+.section{padding:5.5rem 2rem}
+.section-container{max-width:1200px;margin:0 auto}
+.section-eyebrow{font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:0.14em;color:var(--orange);margin-bottom:0.75rem}
+.section h2{font-size:clamp(1.75rem,3.5vw,2.6rem);font-weight:800;line-height:1.2;margin-bottom:1rem;color:var(--navy)}
+.section-sub-dark{font-size:1.05rem;color:#555;max-width:680px;margin-bottom:3rem;line-height:1.65}
+.section-sub-light{font-size:1.05rem;color:rgba(255,255,255,0.7);max-width:680px;margin-bottom:3rem;line-height:1.65}
+
+/* ===== TRUST BAR ===== */
+.trust-bar{background:var(--gray-light);padding:2.5rem 2rem;border-bottom:1px solid #e5e5e5;border-top:1px solid #e5e5e5}
+.trust-container{max-width:1200px;margin:0 auto;text-align:center}
+.trust-label{font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:0.14em;color:#888;margin-bottom:1.25rem}
+.trust-brands{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:1.5rem 3rem}
+.brand-wordmark{font-size:0.95rem;font-weight:800;color:#aaa;letter-spacing:0.08em;white-space:nowrap;transition:color 0.3s}
+.brand-wordmark:hover{color:#333}
+
+/* ===== PAIN SECTION ===== */
+.pain-section{background:#fff}
+.pain-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2rem}
+.pain-card{background:var(--gray-light);border-radius:12px;padding:2rem 1.75rem;border:1px solid #e8e8e8;transition:all 0.3s}
+.pain-card:hover{border-color:var(--orange);box-shadow:0 8px 30px rgba(255,107,43,0.12);transform:translateY(-3px)}
+.pain-num{font-size:0.75rem;font-weight:800;color:var(--orange);background:rgba(255,107,43,0.1);border:1px solid rgba(255,107,43,0.25);border-radius:50%;width:32px;height:32px;display:flex;align-items:center;justify-content:center;margin-bottom:1rem}
+.pain-card h3{font-size:1.1rem;font-weight:800;color:var(--navy);margin-bottom:0.6rem;line-height:1.3}
+.pain-card p{font-size:0.88rem;color:#555;line-height:1.6}
+.pain-card .accent{color:var(--orange);font-weight:700}
+@media(max-width:768px){.pain-grid{grid-template-columns:1fr}}
+
+/* ===== PAGETECH SHOWCASE ===== */
+.showcase-section{background:var(--navy);color:#fff;position:relative;overflow:hidden}
+.showcase-section::before{content:'';position:absolute;top:-100px;left:-100px;width:500px;height:500px;background:radial-gradient(circle,rgba(255,107,43,0.1) 0%,transparent 60%);pointer-events:none}
+.showcase-section h2{color:#fff}
+.showcase-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;position:relative}
+.showcase-feature{display:flex;gap:1rem;margin-bottom:1.5rem;align-items:flex-start}
+.showcase-feature-icon{flex-shrink:0;width:44px;height:44px;border-radius:10px;background:rgba(255,107,43,0.12);border:1px solid rgba(255,107,43,0.3);color:var(--orange);font-size:1.1rem;display:flex;align-items:center;justify-content:center;font-weight:800}
+.showcase-feature h4{font-size:1rem;font-weight:800;color:#fff;margin-bottom:0.3rem}
+.showcase-feature p{font-size:0.88rem;color:rgba(255,255,255,0.65);line-height:1.6}
+.showcase-visual{background:var(--mid-navy);border:1px solid rgba(255,255,255,0.1);border-radius:14px;padding:2rem;box-shadow:0 20px 60px rgba(0,0,0,0.4)}
+.showcase-counter{font-size:3.5rem;font-weight:800;color:var(--orange);line-height:1;margin-bottom:0.4rem}
+.showcase-counter-lbl{font-size:0.85rem;color:rgba(255,255,255,0.7);text-transform:uppercase;letter-spacing:0.1em;font-weight:600;margin-bottom:1.5rem}
+.showcase-list{list-style:none;padding:0}
+.showcase-list li{padding:0.65rem 0;border-bottom:1px solid rgba(255,255,255,0.07);font-size:0.88rem;color:rgba(255,255,255,0.75);display:flex;align-items:center;gap:0.6rem}
+.showcase-list li:last-child{border-bottom:none}
+.showcase-list li::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--orange);flex-shrink:0}
+@media(max-width:900px){.showcase-grid{grid-template-columns:1fr;gap:2.5rem}}
+
+/* ===== STATS STRIP ===== */
+.stats-strip{background:#fff;padding:4rem 2rem;border-bottom:1px solid #eee}
+.stats-container{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;text-align:center}
+.stat-item{padding:1rem}
+.stat-val{font-size:2.5rem;font-weight:800;color:var(--orange);line-height:1;margin-bottom:0.4rem}
+.stat-lbl{font-size:0.82rem;color:#666;font-weight:600;line-height:1.4}
+@media(max-width:768px){.stats-container{grid-template-columns:1fr 1fr;gap:2.5rem 1.5rem}}
+
+/* ===== FEATURE STACK (alternating rows) ===== */
+.stack-section{background:var(--gray-light)}
+.stack-row{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;margin-bottom:5rem}
+.stack-row:last-child{margin-bottom:0}
+.stack-row.reverse{direction:rtl}
+.stack-row.reverse > *{direction:ltr}
+.stack-row .stack-text h3{font-size:1.65rem;font-weight:800;color:var(--navy);margin-bottom:1rem;line-height:1.25}
+.stack-row .stack-text .stack-eyebrow{font-size:0.7rem;font-weight:700;text-transform:uppercase;letter-spacing:0.14em;color:var(--orange);margin-bottom:0.7rem}
+.stack-row .stack-text p{font-size:0.98rem;color:#444;line-height:1.75;margin-bottom:1.25rem}
+.stack-row .stack-text ul{list-style:none;padding:0;margin-bottom:1.25rem}
+.stack-row .stack-text ul li{padding:0.45rem 0;font-size:0.92rem;color:#333;display:flex;align-items:flex-start;gap:0.65rem;line-height:1.55}
+.stack-row .stack-text ul li::before{content:'✓';color:var(--orange);font-weight:800;flex-shrink:0;font-size:1rem}
+.stack-visual{background:#fff;border:1px solid #e5e5e5;border-radius:14px;padding:2rem;min-height:280px;box-shadow:0 12px 40px rgba(10,22,40,0.08);position:relative;overflow:hidden}
+.stack-visual-eyebrow{font-size:0.66rem;color:var(--orange);text-transform:uppercase;letter-spacing:0.12em;font-weight:700;margin-bottom:1rem;display:flex;align-items:center;gap:0.5rem}
+.stack-visual-eyebrow::before{content:'';width:8px;height:8px;border-radius:50%;background:var(--orange)}
+.mock-window{background:#fff;border:1px solid #e0e0e0;border-radius:10px;overflow:hidden}
+.mock-bar{height:28px;background:#f5f5f5;display:flex;align-items:center;gap:0.4rem;padding:0 0.75rem;border-bottom:1px solid #e5e5e5}
+.mock-bar::before,.mock-bar::after{content:'';width:9px;height:9px;border-radius:50%;background:#dadada}
+.mock-bar::after{box-shadow:14px 0 0 #dadada,28px 0 0 #dadada}
+.mock-body{padding:1rem;font-size:0.78rem}
+.mock-row{display:flex;justify-content:space-between;padding:0.45rem 0;border-bottom:1px solid #f0f0f0;color:#555}
+.mock-row:last-child{border-bottom:none}
+.mock-row strong{color:var(--navy);font-weight:700}
+.mock-pill{display:inline-block;font-size:0.65rem;background:rgba(255,107,43,0.12);color:var(--orange);padding:0.15rem 0.55rem;border-radius:10px;font-weight:700}
+@media(max-width:900px){.stack-row,.stack-row.reverse{grid-template-columns:1fr;gap:2rem;direction:ltr}}
+
+/* ===== CONVERSION SECTION ===== */
+.conversion-section{background:#fff}
+.conversion-card{background:linear-gradient(135deg,var(--navy) 0%,var(--mid-navy) 100%);color:#fff;border-radius:18px;padding:3.5rem 3rem;display:grid;grid-template-columns:1.1fr 0.9fr;gap:3rem;align-items:center;position:relative;overflow:hidden}
+.conversion-card::before{content:'';position:absolute;top:-80px;right:-80px;width:300px;height:300px;background:radial-gradient(circle,rgba(255,107,43,0.18) 0%,transparent 60%);pointer-events:none}
+.conv-eyebrow{font-size:0.7rem;color:var(--orange);text-transform:uppercase;letter-spacing:0.14em;font-weight:700;margin-bottom:0.75rem}
+.conversion-card h2{color:#fff;font-size:2rem;margin-bottom:1rem}
+.conversion-card p{font-size:0.98rem;color:rgba(255,255,255,0.72);line-height:1.7;margin-bottom:0}
+.conv-stats{position:relative;display:flex;flex-direction:column;gap:1rem}
+.conv-big{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);border-radius:12px;padding:1.5rem 1.75rem;display:flex;justify-content:space-between;align-items:center}
+.conv-big-val{font-size:2.4rem;font-weight:800;color:var(--orange);line-height:1}
+.conv-big-lbl{font-size:0.85rem;color:rgba(255,255,255,0.75);font-weight:600;text-align:right;line-height:1.3;max-width:160px}
+@media(max-width:900px){.conversion-card{grid-template-columns:1fr;padding:2.5rem 2rem}.conversion-card h2{font-size:1.65rem}}
+
+/* ===== PRICING SECTION ===== */
+.pricing-section{background:var(--gray-light)}
+.pricing-card{background:#fff;border:2px solid var(--orange);border-radius:16px;padding:3rem;max-width:680px;margin:2rem auto 0;box-shadow:0 16px 60px rgba(255,107,43,0.12);text-align:center}
+.pricing-eyebrow{font-size:0.7rem;font-weight:700;text-transform:uppercase;letter-spacing:0.14em;color:var(--orange);margin-bottom:0.5rem}
+.pricing-card h3{font-size:1.6rem;font-weight:800;color:var(--navy);margin-bottom:1.25rem}
+.pricing-card .pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:1.5rem 0 2rem}
+.pricing-pillar{background:var(--gray-light);border-radius:10px;padding:1rem 0.75rem}
+.pricing-pillar-val{font-size:0.95rem;font-weight:800;color:var(--orange);margin-bottom:0.25rem}
+.pricing-pillar-lbl{font-size:0.72rem;color:#666;font-weight:600;line-height:1.3}
+.pricing-card .terms{display:flex;flex-wrap:wrap;justify-content:center;gap:0.5rem;margin-bottom:1.75rem}
+.term-pill{font-size:0.75rem;font-weight:700;color:var(--navy);background:rgba(10,22,40,0.06);padding:0.4rem 0.85rem;border-radius:20px}
+@media(max-width:600px){.pricing-card{padding:2rem 1.5rem}.pricing-card .pillars{grid-template-columns:1fr}}
+
+/* ===== FAQ ===== */
+.faq-section{background:#fff}
+.faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem 2rem;margin-top:2rem}
+.faq-item{background:var(--gray-light);border-radius:10px;padding:1.5rem;border:1px solid #e8e8e8}
+.faq-item h4{font-size:1rem;font-weight:800;color:var(--navy);margin-bottom:0.5rem}
+.faq-item p{font-size:0.88rem;color:#555;line-height:1.65}
+@media(max-width:768px){.faq-grid{grid-template-columns:1fr}}
+
+/* ===== CONTACT ===== */
+.contact-section{background:var(--navy);padding:5.5rem 2rem;position:relative;overflow:hidden}
+.contact-section::before{content:'';position:absolute;top:-50%;right:-10%;width:600px;height:600px;background:radial-gradient(circle,rgba(255,107,43,0.08) 0%,transparent 60%);pointer-events:none}
+.contact-section h2{color:#fff;margin-bottom:0.5rem}
+.contact-sub{color:rgba(255,255,255,0.6);margin-bottom:3rem;font-size:1rem;max-width:600px}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;max-width:1100px;position:relative}
+.contact-col h3{font-weight:700;color:var(--orange);margin-bottom:1rem;text-transform:uppercase;letter-spacing:0.08em;font-size:0.8rem}
+.contact-col h4{font-size:1.15rem;font-weight:800;color:#fff;margin-bottom:0.6rem}
+.contact-col p{font-size:0.875rem;color:rgba(255,255,255,0.6);line-height:1.65;margin-bottom:1.25rem}
+.contact-form{display:flex;flex-direction:column;gap:0.875rem}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:0.875rem}
+.form-field{display:flex;flex-direction:column;gap:0.3rem}
+.form-field label{font-size:0.75rem;font-weight:600;color:rgba(255,255,255,0.6);text-transform:uppercase;letter-spacing:0.08em}
+.form-field input,.form-field select,.form-field textarea{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);border-radius:8px;padding:0.7rem 1rem;color:#fff;font-family:'Inter',sans-serif;font-size:0.875rem;transition:border-color 0.2s;outline:none}
+.form-field input:focus,.form-field select:focus,.form-field textarea:focus{border-color:var(--orange)}
+.form-field select option{background:var(--navy);color:#fff}
+.form-field textarea{resize:vertical;min-height:90px}
+.btn-submit{padding:0.875rem 2rem;background:var(--orange);color:#fff;font-weight:700;font-size:0.95rem;border:none;border-radius:8px;cursor:pointer;transition:all 0.2s;font-family:'Inter',sans-serif}
+.btn-submit:hover{background:var(--orange-dark);transform:translateY(-1px)}
+@media(max-width:768px){.contact-grid{grid-template-columns:1fr}.form-row{grid-template-columns:1fr}}
+
+/* ===== FOOTER ===== */
+.footer{background:#060f1c;color:rgba(255,255,255,0.65);padding:4rem 2rem 2rem}
+.footer-container{max-width:1200px;margin:0 auto}
+.footer-top{display:grid;grid-template-columns:280px 1fr;gap:4rem;margin-bottom:3rem}
+.footer-logo{display:flex;flex-direction:column;line-height:1.1;margin-bottom:0.75rem}
+.footer-tagline{font-size:0.875rem;color:rgba(255,255,255,0.45);margin-top:0.5rem;font-style:italic}
+.footer-cols{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem}
+.footer-col h4{font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:0.12em;color:var(--orange);margin-bottom:1rem}
+.footer-col ul{list-style:none}
+.footer-col ul li{margin-bottom:0.5rem}
+.footer-col ul li a,.footer-col a{font-size:0.85rem;color:rgba(255,255,255,0.55);transition:color 0.2s}
+.footer-col ul li a:hover,.footer-col a:hover{color:var(--orange)}
+.footer-col p{font-size:0.82rem;line-height:1.7;color:rgba(255,255,255,0.45)}
+.footer-bottom{border-top:1px solid rgba(255,255,255,0.07);padding-top:1.5rem;text-align:center;font-size:0.78rem;color:rgba(255,255,255,0.3)}
+@media(max-width:768px){.footer-top{grid-template-columns:1fr}.footer-cols{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){.footer-cols{grid-template-columns:1fr}}
+
+/* ===== ANIMATIONS ===== */
+.fade-up{opacity:0;transform:translateY(28px);transition:opacity 0.6s ease,transform 0.6s ease}
+.fade-up.visible{opacity:1;transform:translateY(0)}
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous">
+</head>
+<body>
+
+<!-- ===== NAVBAR ===== -->
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo">
+      <span class="logo-main">SMARTDEALER</span>
+      <span class="logo-sub">Technologies Inc.</span>
+    </a>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-menu" id="navMenu">
+      <div class="nav-item has-mega" id="megaItem">
+        <button class="nav-link mega-trigger" id="megaTrigger" aria-expanded="false">
+          Portfolio <span class="chevron">▾</span>
+        </button>
+        <div class="mega-menu" id="megaMenu">
+          <div class="mega-inner">
+            <div class="mega-col">
+              <div class="mega-col-header">PartSites LLC</div>
+              <a href="partsites.html" class="mega-item">
+                <span class="mega-icon"><i class="fa-solid fa-cart-shopping"></i></span>
+                <div>
+                  <div class="mega-item-name">PartSites (ENVY PRO)</div>
+                  <div class="mega-item-desc">OEM parts &amp; accessories eStore</div>
+                </div>
+              </a>
+              <a href="partsites.html#epic" class="mega-item">
+                <span class="mega-icon"><i class="fa-solid fa-wrench"></i></span>
+                <div>
+                  <div class="mega-item-name">EPIC Widget</div>
+                  <div class="mega-item-desc">True parts catalog widget for dealer sites</div>
+                </div>
+              </a>
+              <a href="partsites.html#wholesale" class="mega-item">
+                <span class="mega-icon"><i class="fa-solid fa-industry"></i></span>
+                <div>
+                  <div class="mega-item-name">ENVY Wholesale</div>
+                  <div class="mega-item-desc">B2B wholesale parts platform</div>
+                </div>
+              </a>
+              <a href="marketplace.html" class="mega-item">
+                <span class="mega-icon"><i class="fa-solid fa-store"></i></span>
+                <div>
+                  <div class="mega-item-name">MARKETPLACE</div>
+                  <div class="mega-item-desc">National OEM parts destination</div>
+                </div>
+              </a>
+            </div>
+            <div class="mega-col">
+              <div class="mega-col-header">InDesign Data LLC</div>
+              <a href="dmsconnect.html" class="mega-item">
+                <span class="mega-icon"><i class="fa-solid fa-plug"></i></span>
+                <div>
+                  <div class="mega-item-name">DMSconnect</div>
+                  <div class="mega-item-desc">Bidirectional DMS data pipeline for ISVs</div>
+                </div>
+              </a>
+              <a href="dmsbackups.html" class="mega-item">
+                <span class="mega-icon"><i class="fa-solid fa-shield-halved"></i></span>
+                <div>
+                  <div class="mega-item-name">DMSbackups</div>
+                  <div class="mega-item-desc">Daily DMS backup &amp; cyberattack protection</div>
+                </div>
+              </a>
+              <a href="docevolution.html" class="mega-item">
+                <span class="mega-icon"><i class="fa-solid fa-file-lines"></i></span>
+                <div>
+                  <div class="mega-item-name">DocEvolution</div>
+                  <div class="mega-item-desc">Cloud document management &amp; digital signatures</div>
+                </div>
+              </a>
+            </div>
+            <div class="mega-col">
+              <div class="mega-col-header">Featured</div>
+              <a href="engage360.html" class="mega-featured">
+                <span class="mega-icon-lg">🎯</span>
+                <div class="mega-item-name" style="color:#fff;font-size:1rem;margin-bottom:0.3rem">ENGAGE360</div>
+                <div class="mega-item-desc" style="color:rgba(255,255,255,0.6);font-size:0.78rem">In-store 4D accessory sales platform. 155% PNVR increase.</div>
+                <span class="mega-badge">JD Power Verified</span>
+              </a>
+            </div>
+          </div>
+          <div class="mega-footer">
+            <a href="index.html#portfolio">View Full Portfolio →</a>
+          </div>
+        </div>
+      </div>
+      <a href="index.html#about" class="nav-link">About</a>
+      <a href="index.html#contact" class="nav-link">Contact</a>
+      <a href="#contact" class="nav-cta">Request Demo</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<header class="page-hero">
+  <div class="hero-container">
+    <div>
+      <span class="hero-eyebrow"><i class="fa-solid fa-trophy"></i> #1 Ranked OEM Parts eStore</span>
+      <h1>The Parts eCommerce Engine Dealers Use to <span class="accent">Outrank Amazon.</span></h1>
+      <p class="lede">PartSites' proprietary <strong style="color:#fff">PAGETECH</strong> engine auto-generates <strong style="color:#fff">75,000 SEO-optimized pages per brand</strong> — the deepest, fastest-indexing parts catalog on the internet. Real-time pricing. VIN decode. Fraud protection. No transaction fees. No contracts.</p>
+      <div class="hero-stats">
+        <div class="hero-stat"><div class="hero-stat-val">$500M+</div><div class="hero-stat-lbl">Dealer Sales Driven</div></div>
+        <div class="hero-stat"><div class="hero-stat-val">10M+</div><div class="hero-stat-lbl">Active Users</div></div>
+        <div class="hero-stat"><div class="hero-stat-val">10:1</div><div class="hero-stat-lbl">Avg $ Conversion</div></div>
+      </div>
+      <div class="hero-btns">
+        <a href="#contact" class="btn-primary"><i class="fa-solid fa-rocket"></i> Request a Demo</a>
+        <a href="#features" class="btn-outline">See How It Works</a>
+      </div>
+    </div>
+    <div class="hero-visual" aria-hidden="true">
+      <div class="hero-card hero-card-1">
+        <div class="hc-label">ENVY PRO 4.0</div>
+        <div class="hc-title">2024 F-150 — Tow Mirror Kit</div>
+        <div class="hc-sub">VIN-matched · OEM #ML34-17682-AA</div>
+        <div style="display:flex;justify-content:space-between;margin-top:0.7rem;align-items:center"><span class="hc-sub" style="color:var(--orange);font-weight:700">$489.00</span><span class="mega-badge" style="margin:0">In Stock</span></div>
+      </div>
+      <div class="hero-card hero-card-2">
+        <div class="hc-label">SEO PAGES INDEXED</div>
+        <div class="hc-big" style="color:var(--orange)">75,142</div>
+        <div class="hc-sub">per brand · auto-generated</div>
+        <div class="hc-bar"><div style="width:92%"></div></div>
+      </div>
+      <div class="hero-card hero-card-3">
+        <div class="hc-label">FRAUD SHIELD</div>
+        <div class="hc-title">Real-time Risk Score</div>
+        <div class="hc-sub">23 signals · sub-200ms scoring</div>
+        <div style="display:flex;gap:0.5rem;margin-top:0.7rem"><span class="mega-badge" style="margin:0;background:rgba(34,197,94,0.15);color:#22c55e;border-color:rgba(34,197,94,0.3)">✓ Approved</span><span class="hc-sub" style="font-size:0.7rem">Order #84291</span></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ===== TRUST BAR ===== -->
+<div class="trust-bar">
+  <div class="trust-container">
+    <div class="trust-label">Powering OEM &amp; Dealer Parts eCommerce For</div>
+    <div class="trust-brands">
+      <span class="brand-wordmark">VOLKSWAGEN</span>
+      <span class="brand-wordmark">SUBARU</span>
+      <span class="brand-wordmark">KIA / MOBIS</span>
+      <span class="brand-wordmark">NISSAN</span>
+      <span class="brand-wordmark">CHRYSLER · MOPAR</span>
+      <span class="brand-wordmark">J.D. POWER</span>
+      <span class="brand-wordmark">AUTONATION</span>
+    </div>
+  </div>
+</div>
+
+<!-- ===== STATS STRIP ===== -->
+<section class="stats-strip">
+  <div class="stats-container">
+    <div class="stat-item"><div class="stat-val">75K</div><div class="stat-lbl">SEO pages auto-generated per brand</div></div>
+    <div class="stat-item"><div class="stat-val">$500M+</div><div class="stat-lbl">Parts sold through the platform</div></div>
+    <div class="stat-item"><div class="stat-val">10M+</div><div class="stat-lbl">Active end users served</div></div>
+    <div class="stat-item"><div class="stat-val">10 : 1</div><div class="stat-lbl">Avg revenue-per-visit conversion</div></div>
+  </div>
+</section>
+
+<!-- ===== PAIN ===== -->
+<section class="section pain-section">
+  <div class="section-container">
+    <div class="section-eyebrow">Why Most Dealer Parts eStores Lose</div>
+    <h2>Your Parts eCommerce Is Bleeding Revenue. Here's Where.</h2>
+    <p class="section-sub-dark">Dealerships sit on a $50B+ aftermarket parts opportunity — but most "dealer sites" are stuck on generic templates with shallow catalogs, no SEO horsepower, and a checkout that fraudsters love. PartSites was built to fix every one of these leaks.</p>
+    <div class="pain-grid">
+      <div class="pain-card">
+        <div class="pain-num">01</div>
+        <h3>Buyers Find Amazon First</h3>
+        <p>Generic dealer sites publish a handful of category pages. <span class="accent">PAGETECH publishes 75,000 deep-linked pages per brand</span> — every part number, VIN application, and accessory bundle, indexed and ranking.</p>
+      </div>
+      <div class="pain-card">
+        <div class="pain-num">02</div>
+        <h3>Wrong-Fit Returns Crush Margin</h3>
+        <p>Customers buy parts that don't fit, dealers eat the freight. ENVY PRO's <span class="accent">VIN decode + real-time fitment</span> drops mis-fit returns and protects gross.</p>
+      </div>
+      <div class="pain-card">
+        <div class="pain-num">03</div>
+        <h3>Chargebacks &amp; Fraud Drain Profit</h3>
+        <p>Card-not-present fraud is silent margin loss. PartSites runs <span class="accent">23-signal real-time fraud detection</span> on every order — sub-200ms scoring, before fulfillment.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PAGETECH SHOWCASE ===== -->
+<section class="section showcase-section" id="features">
+  <div class="section-container">
+    <div class="section-eyebrow">PAGETECH™ · The SEO Engine</div>
+    <h2>75,000 Auto-Indexed Pages. One Engine. Every Brand.</h2>
+    <p class="section-sub-light">PAGETECH is the patented page-generation engine behind every PartSites eStore. It ingests the OEM master catalog, decodes VIN applications, builds long-tail SEO templates, and publishes a deep, structured page set that ranks where buyers actually search — by part number, by fitment, by vehicle, by accessory.</p>
+    <div class="showcase-grid">
+      <div>
+        <div class="showcase-feature">
+          <div class="showcase-feature-icon">01</div>
+          <div>
+            <h4>Long-Tail Domination</h4>
+            <p>Auto-published pages for every part number, application, fitment, and bundle — the structured depth Google rewards. The result: organic traffic that compounds.</p>
+          </div>
+        </div>
+        <div class="showcase-feature">
+          <div class="showcase-feature-icon">02</div>
+          <div>
+            <h4>Real-Time OEM Catalog Sync</h4>
+            <p>Direct OEM master-data feed. Pricing, supersessions, fitment, imagery — synced nightly so your storefront never serves a dead SKU.</p>
+          </div>
+        </div>
+        <div class="showcase-feature">
+          <div class="showcase-feature-icon">03</div>
+          <div>
+            <h4>Schema &amp; Structured Data</h4>
+            <p>Product schema, breadcrumb schema, FAQ schema, vehicle-fitment schema — every page emits the rich data that drives rich-results placement.</p>
+          </div>
+        </div>
+        <div class="showcase-feature">
+          <div class="showcase-feature-icon">04</div>
+          <div>
+            <h4>Multi-Brand &amp; Multi-Store</h4>
+            <p>Run a single dealer eStore or a dealer-group network of 50+ stores from one console. Centralized pricing rules, decentralized fulfillment.</p>
+          </div>
+        </div>
+      </div>
+      <div class="showcase-visual">
+        <div class="showcase-counter">75,142</div>
+        <div class="showcase-counter-lbl">SEO-indexed pages per brand</div>
+        <ul class="showcase-list">
+          <li>Part-number pages — direct OEM #s</li>
+          <li>Fitment pages — every YMM × subcategory</li>
+          <li>Accessory landing pages — by vehicle</li>
+          <li>VIN-decoded application pages</li>
+          <li>Category &amp; subcategory hubs</li>
+          <li>Rich-result-ready schema on every page</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FEATURE STACK (alternating rows) ===== -->
+<section class="section stack-section">
+  <div class="section-container">
+    <div class="section-eyebrow">Inside the Platform</div>
+    <h2>ENVY PRO 4.0 — The Latest Release</h2>
+    <p class="section-sub-dark">Deeper catalog. Faster fitment. Smarter checkout. ENVY PRO 4.0 is the production storefront that powers every PartSites dealer site — built on PAGETECH, hardened with fraud protection, and tuned for $10-of-revenue per $1-of-traffic conversion.</p>
+
+    <!-- Row 1: VIN -->
+    <div class="stack-row">
+      <div class="stack-text">
+        <div class="stack-eyebrow">Vehicle Intelligence</div>
+        <h3>VIN-Decoded Fitment in One Click</h3>
+        <p>Buyers paste a VIN, ENVY PRO returns the exact configuration — engine, trim, axle, package codes — and filters the catalog to <em>only</em> the parts that fit. Eliminates the #1 source of returns and the #1 source of chat-team time.</p>
+        <ul>
+          <li>17-digit VIN decode with full configuration tree</li>
+          <li>Year-Make-Model fallback for legacy buyers</li>
+          <li>Application validation at checkout — final-fit safety net</li>
+          <li>"Save my vehicle" — repeat-buyer personalization</li>
+        </ul>
+      </div>
+      <div class="stack-visual">
+        <div class="stack-visual-eyebrow">Live VIN Decode</div>
+        <div class="mock-window">
+          <div class="mock-bar"></div>
+          <div class="mock-body">
+            <div class="mock-row"><span>VIN</span><strong>1FTFW1E89PFA8…</strong></div>
+            <div class="mock-row"><span>Year / Model</span><strong>2023 F-150</strong></div>
+            <div class="mock-row"><span>Trim</span><strong>XLT SuperCrew 4×4</strong></div>
+            <div class="mock-row"><span>Engine</span><strong>3.5L EcoBoost V6</strong></div>
+            <div class="mock-row"><span>Catalog filter</span><span class="mock-pill">2,847 fitted parts</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Row 2: Fraud -->
+    <div class="stack-row reverse">
+      <div class="stack-text">
+        <div class="stack-eyebrow">Fraud &amp; Risk</div>
+        <h3>23-Signal Fraud Detection. Sub-200ms.</h3>
+        <p>Card-not-present fraud is silent gross-profit erosion. ENVY PRO scores every checkout against device, geo, velocity, BIN, AVS/CVV, shipping-mismatch, and behavioral signals — before the order hits fulfillment. Approve good orders. Block bad ones. Stop the chargebacks.</p>
+        <ul>
+          <li>Device fingerprint + IP geolocation</li>
+          <li>BIN, AVS, CVV cross-checks with issuer signals</li>
+          <li>Velocity throttles — same-card, same-IP, same-shipping</li>
+          <li>Manual-review queue for human approval on borderline orders</li>
+        </ul>
+      </div>
+      <div class="stack-visual">
+        <div class="stack-visual-eyebrow">Fraud Shield · Order #84291</div>
+        <div class="mock-window">
+          <div class="mock-bar"></div>
+          <div class="mock-body">
+            <div class="mock-row"><span>Risk score</span><strong style="color:#22c55e">12 / 100  · LOW</strong></div>
+            <div class="mock-row"><span>Device</span><strong>Returning · 14 prior orders</strong></div>
+            <div class="mock-row"><span>AVS / CVV</span><strong>Match · Match</strong></div>
+            <div class="mock-row"><span>Velocity</span><strong>Normal</strong></div>
+            <div class="mock-row"><span>Decision</span><span class="mock-pill" style="background:rgba(34,197,94,0.12);color:#16a34a">✓ Auto-approve</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Row 3: Multi-store -->
+    <div class="stack-row">
+      <div class="stack-text">
+        <div class="stack-eyebrow">Dealer Groups</div>
+        <h3>One Console. 50+ Stores. Zero Chaos.</h3>
+        <p>If you run a dealer group, ENVY PRO's multi-store network lets you operate every rooftop's parts eStore from a single console — centralized pricing rules, brand-specific catalogs, decentralized fulfillment, consolidated reporting.</p>
+        <ul>
+          <li>Brand-specific subdomains and storefronts per rooftop</li>
+          <li>Centralized matrix pricing + promotion rules</li>
+          <li>Per-store fulfillment, inventory, and SLA tracking</li>
+          <li>Consolidated group-level revenue &amp; margin reporting</li>
+        </ul>
+      </div>
+      <div class="stack-visual">
+        <div class="stack-visual-eyebrow">Dealer Group Console</div>
+        <div class="mock-window">
+          <div class="mock-bar"></div>
+          <div class="mock-body">
+            <div class="mock-row"><span>Active rooftops</span><strong>52</strong></div>
+            <div class="mock-row"><span>MTD revenue (group)</span><strong>$1.84M</strong></div>
+            <div class="mock-row"><span>Top store</span><strong>Anderson Ford — $214K</strong></div>
+            <div class="mock-row"><span>Gross margin</span><strong style="color:var(--orange)">31.8%</strong></div>
+            <div class="mock-row"><span>Conversion</span><span class="mock-pill">9.4 : 1</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== EPIC WIDGET ===== -->
+<section class="section conversion-section" id="epic">
+  <div class="section-container">
+    <div class="conversion-card">
+      <div>
+        <div class="conv-eyebrow"><i class="fa-solid fa-wrench"></i> EPIC Widget · Embed the Catalog Anywhere</div>
+        <h2>True Parts Catalog. Inside Any Dealer Website.</h2>
+        <p>EPIC is the embeddable PartSites widget that drops a true OEM parts catalog into your dealer's existing website — Dealer.com, DealerInspire, Dealer eProcess, custom builds, any platform. Same VIN decode, same fitment engine, same checkout — without a full eStore replatform.</p>
+      </div>
+      <div class="conv-stats">
+        <div class="conv-big"><span class="conv-big-val">2 lines</span><span class="conv-big-lbl">of code to embed on any dealer site</span></div>
+        <div class="conv-big"><span class="conv-big-val">100%</span><span class="conv-big-lbl">platform-agnostic — works with Dealer.com, DealerInspire, and custom builds</span></div>
+        <div class="conv-big"><span class="conv-big-val">&lt; 1 day</span><span class="conv-big-lbl">to go live — no migration, no downtime</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WHOLESALE ===== -->
+<section class="section stack-section" id="wholesale" style="background:#fff">
+  <div class="section-container">
+    <div class="section-eyebrow">B2B</div>
+    <h2>ENVY Wholesale — The Parts Counter, Digitized.</h2>
+    <p class="section-sub-dark">Wholesale parts buyers — body shops, indie mechanics, mobile techs — order in volume and order all day. ENVY Wholesale gives your parts counter a B2B-grade portal: account-specific pricing tiers, net-terms billing, repeat-order tools, and a buyer experience built for shops, not retail consumers.</p>
+    <div class="stack-row">
+      <div class="stack-text">
+        <div class="stack-eyebrow">Built for Volume Buyers</div>
+        <h3>Account-Specific Pricing. Net Terms. Repeat-Order Tools.</h3>
+        <ul>
+          <li>Tiered matrix pricing per wholesale account</li>
+          <li>Net-30 / Net-60 terms with credit-limit enforcement</li>
+          <li>Order history, re-order, and saved-cart workflows</li>
+          <li>Quote → PO → order conversion in a single flow</li>
+          <li>Dedicated wholesale rep dashboards &amp; reporting</li>
+        </ul>
+        <a href="#contact" class="btn-primary" style="margin-top:0.5rem;color:#fff;padding:0.75rem 1.5rem">Talk to Wholesale Team <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+      <div class="stack-visual">
+        <div class="stack-visual-eyebrow">Wholesale Account · Anderson Auto Body</div>
+        <div class="mock-window">
+          <div class="mock-bar"></div>
+          <div class="mock-body">
+            <div class="mock-row"><span>Pricing tier</span><strong>Platinum · 22% off list</strong></div>
+            <div class="mock-row"><span>Credit limit</span><strong>$25,000 / Net 30</strong></div>
+            <div class="mock-row"><span>YTD volume</span><strong>$184,210</strong></div>
+            <div class="mock-row"><span>Open orders</span><strong>7</strong></div>
+            <div class="mock-row"><span>Avg cart</span><span class="mock-pill">$1,847</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONVERSION RESULTS ===== -->
+<section class="section conversion-section">
+  <div class="section-container">
+    <div class="conversion-card">
+      <div>
+        <div class="conv-eyebrow"><i class="fa-solid fa-chart-line"></i> The Numbers</div>
+        <h2>10 : 1 Average Revenue-to-Traffic Ratio.</h2>
+        <p>PartSites stores convert at a level generic dealer eStores can't touch. The combination of PAGETECH's deep SEO surface, VIN-driven fitment, and fraud-cleared checkout produces an average of $10 in dealer revenue for every $1 of qualified traffic — and turns single-site dealers into multi-million-dollar online parts operations.</p>
+      </div>
+      <div class="conv-stats">
+        <div class="conv-big"><span class="conv-big-val">10 : 1</span><span class="conv-big-lbl">Avg $ conversion across the network</span></div>
+        <div class="conv-big"><span class="conv-big-val">$500M+</span><span class="conv-big-lbl">Lifetime parts sales through the platform</span></div>
+        <div class="conv-big"><span class="conv-big-val">10M+</span><span class="conv-big-lbl">Active end users — buyers across the network</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PRICING / NO-TERMS PITCH ===== -->
+<section class="section pricing-section">
+  <div class="section-container" style="text-align:center">
+    <div class="section-eyebrow">The PartSites Deal</div>
+    <h2 style="text-align:center;margin-left:auto;margin-right:auto">No Transaction Fees. No Long Contracts. No BS.</h2>
+    <p class="section-sub-dark" style="margin-left:auto;margin-right:auto;text-align:center">PartSites doesn't take a cut of your dealer's parts sales. You don't pay per-order, per-transaction, or per-SKU. You don't sign a multi-year. We win when you win — and we'll prove it in 90 days.</p>
+    <div class="pricing-card">
+      <div class="pricing-eyebrow">Standard PartSites Engagement</div>
+      <h3>Built for Single Stores, Dealer Groups &amp; OEM Programs.</h3>
+      <div class="pillars">
+        <div class="pricing-pillar"><div class="pricing-pillar-val">$0</div><div class="pricing-pillar-lbl">Per-order transaction fees</div></div>
+        <div class="pricing-pillar"><div class="pricing-pillar-val">30 days</div><div class="pricing-pillar-lbl">Standard build to launch</div></div>
+        <div class="pricing-pillar"><div class="pricing-pillar-val">90 days</div><div class="pricing-pillar-lbl">Performance-out clause</div></div>
+      </div>
+      <div class="terms">
+        <span class="term-pill">No transaction fees</span>
+        <span class="term-pill">No multi-year lock-in</span>
+        <span class="term-pill">OEM-program ready</span>
+        <span class="term-pill">Dealer-group rate card</span>
+        <span class="term-pill">White-label available</span>
+      </div>
+      <a href="#contact" class="btn-primary" style="color:#fff">Get a Custom Quote <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section class="section faq-section">
+  <div class="section-container">
+    <div class="section-eyebrow">Common Questions</div>
+    <h2>What Dealers Ask Before They Sign.</h2>
+    <p class="section-sub-dark">Straight answers — no marketing fog.</p>
+    <div class="faq-grid">
+      <div class="faq-item">
+        <h4>How fast can a PartSites store go live?</h4>
+        <p>Standard build-to-launch is 30 days from OEM catalog hand-off — VIN decode, PAGETECH SEO surface, fraud shield, and checkout all live. Multi-store dealer groups typically go live in waves of 5–10 rooftops per month.</p>
+      </div>
+      <div class="faq-item">
+        <h4>Does PartSites replace my current dealer website?</h4>
+        <p>No — PartSites runs alongside it. Most dealers either (a) use PartSites as their parts subdomain (parts.dealersite.com) or (b) embed our EPIC widget into their existing Dealer.com / DealerInspire / custom site. No replatform required.</p>
+      </div>
+      <div class="faq-item">
+        <h4>Which OEMs are supported?</h4>
+        <p>Including but not limited to Volkswagen of America &amp; Canada, Subaru of North America, Kia / Mobis, Nissan North America, and Chrysler / Mopar (PartSites powered the first Mopar DTC eStore). New OEM catalogs added on request.</p>
+      </div>
+      <div class="faq-item">
+        <h4>How is PartSites priced?</h4>
+        <p>Flat platform fee per store — no per-order transaction fees, no take-rate on parts sold, no per-SKU charges. Dealer groups get a network rate card. OEM programs get custom pricing.</p>
+      </div>
+      <div class="faq-item">
+        <h4>Do you handle fulfillment?</h4>
+        <p>No — fulfillment stays with the dealer (or the dealer group's central warehouse). PartSites runs the catalog, the storefront, the checkout, and the fraud shield. Your team ships the box.</p>
+      </div>
+      <div class="faq-item">
+        <h4>Can I white-label PartSites for an OEM program?</h4>
+        <p>Yes. PartSites powers both branded dealer eStores and white-labeled OEM programs — including a multi-year run with J.D. Power. Speak to us about a program build.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section class="contact-section" id="contact">
+  <div class="section-container">
+    <div class="section-eyebrow">Talk to PartSites</div>
+    <h2>Ready to Turn Your Parts Counter Into a Channel?</h2>
+    <p class="contact-sub">Tell us about your store, your group, or your OEM program. We'll show you what your parts revenue could look like in 90 days.</p>
+    <div class="contact-grid">
+      <div class="contact-col">
+        <h3>SmartDealer · PartSites LLC</h3>
+        <h4>Miami HQ</h4>
+        <p>175 SW 7th Street<br>Suite 2010<br>Miami, FL 33130<br><br>
+        <a href="https://linkedin.com/in/smartdealer" target="_blank" style="color:var(--orange);font-weight:600">linkedin.com/in/smartdealer</a></p>
+        <h4 style="margin-top:1.5rem">What You Get on the Call</h4>
+        <p>A live walkthrough of an ENVY PRO storefront, PAGETECH's indexed surface for your brand, and a back-of-envelope revenue forecast based on your current dealer traffic.</p>
+      </div>
+      <div class="contact-col">
+        <form class="contact-form" onsubmit="event.preventDefault(); alert('Thanks — the PartSites team will reach out within 1 business day.');">
+          <div class="form-row">
+            <div class="form-field"><label>First Name</label><input type="text" required></div>
+            <div class="form-field"><label>Last Name</label><input type="text" required></div>
+          </div>
+          <div class="form-field"><label>Work Email</label><input type="email" required></div>
+          <div class="form-field"><label>Company / Dealer Group</label><input type="text" required></div>
+          <div class="form-field"><label>Interested In</label>
+            <select required>
+              <option value="">Select…</option>
+              <option>Single-store PartSites eStore</option>
+              <option>Dealer-group network (multi-rooftop)</option>
+              <option>EPIC widget for existing site</option>
+              <option>ENVY Wholesale (B2B)</option>
+              <option>OEM program / white-label</option>
+            </select>
+          </div>
+          <div class="form-field"><label>Tell us about your store / program</label><textarea></textarea></div>
+          <button type="submit" class="btn-submit">Request Demo</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <span class="logo-main" style="font-size:1.1rem">SMARTDEALER</span>
+          <span class="logo-sub" style="font-size:0.58rem">Technologies Inc.</span>
+        </div>
+        <p class="footer-tagline">Smart Products. Smart Business.</p>
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h4>Portfolio</h4>
+          <ul>
+            <li><a href="engage360.html">ENGAGE360</a></li>
+            <li><a href="partsites.html">PartSites</a></li>
+            <li><a href="dmsbackups.html">DMSbackups</a></li>
+            <li><a href="docevolution.html">DocEvolution</a></li>
+            <li><a href="dmsconnect.html">DMSconnect</a></li>
+            <li><a href="marketplace.html">MARKETPLACE</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <p>175 SW 7th Street<br>Suite 2010<br>Miami, FL 33130</p>
+          <a href="https://linkedin.com/in/smartdealer" target="_blank" style="display:inline-block;margin-top:0.75rem">linkedin.com/in/smartdealer</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 SmartDealer Technologies Inc. | InDesign Data LLC | PartSites LLC</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+// ===== MEGA MENU =====
+const megaItem = document.getElementById('megaItem');
+const megaTrigger = document.getElementById('megaTrigger');
+const hamburger = document.getElementById('hamburger');
+const navMenu = document.getElementById('navMenu');
+
+if (megaTrigger) {
+  megaTrigger.addEventListener('click', (e) => {
+    if (window.innerWidth <= 900) {
+      e.preventDefault();
+      megaItem.classList.toggle('open');
+      megaTrigger.setAttribute('aria-expanded', megaItem.classList.contains('open'));
+      const chevron = megaTrigger.querySelector('.chevron');
+      if (chevron) chevron.style.transform = megaItem.classList.contains('open') ? 'rotate(180deg)' : '';
+    }
+  });
+}
+
+hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('active');
+  navMenu.classList.toggle('open');
+});
+
+document.querySelectorAll('.mega-item, .nav-link:not(.mega-trigger), .nav-cta').forEach(link => {
+  link.addEventListener('click', () => {
+    if (window.innerWidth <= 900) {
+      hamburger.classList.remove('active');
+      navMenu.classList.remove('open');
+    }
+  });
+});
+
+document.addEventListener('click', (e) => {
+  if (!megaItem.contains(e.target)) megaItem.classList.remove('open');
+});
+
+window.addEventListener('scroll', () => {
+  const nav = document.getElementById('navbar');
+  nav.style.borderBottomColor = window.scrollY > 50 ? 'rgba(255,107,43,0.2)' : 'rgba(255,255,255,0.08)';
+});
+
+// ===== ANIMATIONS =====
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry, i) => {
+    if (entry.isIntersecting) {
+      setTimeout(() => entry.target.classList.add('visible'), i * 80);
+    }
+  });
+}, { threshold: 0.08 });
+document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
