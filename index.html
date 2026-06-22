@@ -88,6 +88,7 @@ img{max-width:100%;display:block}
 .hero h1{font-size:clamp(2rem,4.5vw,3.5rem);font-weight:800;color:#fff;line-height:1.15;margin-bottom:1.25rem;max-width:780px}
 .hero h1 span{color:var(--orange)}
 .hero-sub{font-size:1.15rem;color:rgba(255,255,255,0.7);max-width:600px;margin-bottom:2.5rem;line-height:1.7}
+.hero-text-wrap{transition:opacity 0.35s ease}.hero-text-wrap.fading{opacity:0}
 .hero-btns{display:flex;gap:1rem;flex-wrap:wrap}
 .btn-primary{display:inline-flex;align-items:center;padding:0.875rem 2rem;background:var(--orange);color:#fff;font-weight:700;font-size:0.95rem;border-radius:8px;transition:all 0.2s;border:2px solid transparent}
 .btn-primary:hover{background:var(--orange-dark);transform:translateY(-2px);box-shadow:0 8px 25px rgba(255,107,43,0.4)}
@@ -306,27 +307,57 @@ img{max-width:100%;display:block}
   <div class="slider-wrap hero-slider">
     <div class="slider-track" id="sliderTrack">
 
-      <div class="slide active">
+      <div class="slide active"
+        data-eyebrow="Smart Products for Smart Business"
+        data-headline="The Automotive Software Group Behind the Industry's Most "
+        data-headline-em="Proven Platforms"
+        data-sub="30 years. 15,000+ installations. $500M+ in dealer sales. Built by the founders of Parts.com."
+        data-cta1-text="Schedule a Demo" data-cta1-href="#contact"
+        data-cta2-text="Explore Portfolio" data-cta2-href="#portfolio">
         <video class="slide-video" autoplay muted loop playsinline><source src="slider-showroom.mp4" type="video/mp4"></video>
         <div class="slide-overlay"></div>
       </div>
 
-      <div class="slide">
+      <div class="slide"
+        data-eyebrow="Parts &amp; Accessories eCommerce"
+        data-headline="Turn Your OEM Parts Catalog Into a "
+        data-headline-em="$500M Revenue Engine"
+        data-sub="ENVY PRO by PartSites generates 75,000 SEO pages per brand — making you the #1-ranked OEM parts destination your customers actually find."
+        data-cta1-text="See PartSites" data-cta1-href="partsites.html"
+        data-cta2-text="Schedule a Demo" data-cta2-href="#contact">
         <div class="slide-bg" style="background-image:url('https://smartdealer.com/wp-content/uploads/2025/05/Envy-billboard-copy-1.png')"></div>
         <div class="slide-overlay"></div>
       </div>
 
-      <div class="slide">
+      <div class="slide"
+        data-eyebrow="DMS Data Protection"
+        data-headline="When Your DMS Goes Down, "
+        data-headline-em="Your Business Doesn't Have To"
+        data-sub="DMSbackups powered by B.A.R.T. delivers daily bidirectional backups across CDK, Reynolds, Tekion and more — so a cyberattack never becomes a catastrophe."
+        data-cta1-text="Protect Your Data" data-cta1-href="dmsbackups.html"
+        data-cta2-text="See How It Works" data-cta2-href="#portfolio">
         <div class="slide-bg" style="background-image:url('https://smartdealer.com/wp-content/uploads/2025/11/new-smartdealer-tko.png')"></div>
         <div class="slide-overlay"></div>
       </div>
 
-      <div class="slide">
+      <div class="slide"
+        data-eyebrow="Accessory Revenue Capture"
+        data-headline="Stop Leaving Accessory Revenue on the Table — "
+        data-headline-em="ENGAGE360 Captures It All"
+        data-sub="A verified 155% PNVR increase. ENGAGE360 captures the 70–80% of buyers who never buy accessories from the dealer. JD Power verified."
+        data-cta1-text="See ENGAGE360" data-cta1-href="engage360.html"
+        data-cta2-text="Schedule a Demo" data-cta2-href="#contact">
         <div class="slide-bg" style="background-image:url('https://smartdealer.com/wp-content/uploads/2025/05/dealerbox-bilboard-1.png')"></div>
         <div class="slide-overlay"></div>
       </div>
 
-      <div class="slide">
+      <div class="slide"
+        data-eyebrow="DMS Data Integration"
+        data-headline="Connect Any Platform to Any DMS — "
+        data-headline-em="In Real Time"
+        data-sub="DMSconnect delivers bidirectional data pipelines across CDK, Reynolds &amp; Reynolds, Tekion, and more — giving ISVs and dealerships instant, reliable data flow."
+        data-cta1-text="Explore DMSconnect" data-cta1-href="dmsconnect.html"
+        data-cta2-text="Get Connected" data-cta2-href="#contact">
         <div class="slide-bg" style="background-image:url('https://smartdealer.com/wp-content/uploads/2025/05/DMSconnect-bilboard.png')"></div>
         <div class="slide-overlay"></div>
       </div>
@@ -335,13 +366,13 @@ img{max-width:100%;display:block}
 
   <div class="hero-grid"></div>
   <div class="hero-container">
-    <div class="fade-up">
-      <div class="hero-eyebrow">Accelerate Your Dealership</div>
-      <h1>The Automotive Software Group Behind the Industry's Most <span>Proven Platforms</span></h1>
-      <p class="hero-sub">30 years. 15,000+ installations. $500M+ in dealer sales. Built by the founders of Parts.com.</p>
+    <div class="fade-up hero-text-wrap" id="heroTextWrap">
+      <div class="hero-eyebrow" id="heroEyebrow">Smart Products for Smart Business</div>
+      <h1 id="heroHeadline">The Automotive Software Group Behind the Industry's Most <span>Proven Platforms</span></h1>
+      <p class="hero-sub" id="heroSub">30 years. 15,000+ installations. $500M+ in dealer sales. Built by the founders of Parts.com.</p>
       <div class="hero-btns">
-        <a href="#contact" class="btn-primary">Schedule a Demo</a>
-        <a href="#portfolio" class="btn-outline">Explore Portfolio</a>
+        <a href="#contact" class="btn-primary" id="heroCta1">Schedule a Demo</a>
+        <a href="#portfolio" class="btn-outline" id="heroCta2">Explore Portfolio</a>
       </div>
     </div>
     
@@ -696,10 +727,30 @@ document.querySelectorAll('[data-target]').forEach(el => cObserver.observe(el));
         if (n < 0) n = totalSlides - 1;
         if (n >= totalSlides) n = 0;
         currentSlide = n;
-        
+
         slides.forEach((s, i) => s.classList.toggle('active', i === n));
         dots.forEach((d, i) => d.classList.toggle('active', i === n));
-        
+
+        // Swap hero text with fade transition
+        var slide = slides[n];
+        var wrap = document.getElementById('heroTextWrap');
+        if (slide && wrap && slide.dataset.eyebrow) {
+            wrap.classList.add('fading');
+            setTimeout(function() {
+                var ey  = document.getElementById('heroEyebrow');
+                var hl  = document.getElementById('heroHeadline');
+                var sub = document.getElementById('heroSub');
+                var c1  = document.getElementById('heroCta1');
+                var c2  = document.getElementById('heroCta2');
+                if (ey)  ey.textContent = slide.dataset.eyebrow;
+                if (hl)  hl.innerHTML  = (slide.dataset.headline || '') + '<span>' + (slide.dataset.headlineEm || '') + '</span>';
+                if (sub) sub.textContent = slide.dataset.sub;
+                if (c1)  { c1.textContent = slide.dataset.cta1Text; c1.href = slide.dataset.cta1Href; }
+                if (c2)  { c2.textContent = slide.dataset.cta2Text; c2.href = slide.dataset.cta2Href; }
+                wrap.classList.remove('fading');
+            }, 350);
+        }
+
         resetInterval();
     }
 
